@@ -43,6 +43,11 @@ ROOT_URLCONF = 'project_name.urls'
 WSGI_APPLICATION = 'project_name.wsgi.application'
 
 
+# Sass Compiler
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'django_libsass.SassCompiler'),
+)
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
