@@ -1,13 +1,19 @@
-#### Rename your project_name
-### Manage.py
-Change the project_name to   
+### Rename your project_name
+#### Manage.py
+#### Change the settings according to the your development, staging and production server
+Change the environment during deployment as staging or production
 ```manage.py
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "project_name.settings")
+environment = "development" # staging or production
+
+if environment == "production":
+      os.environ.setdefault("DJANGO_SETTINGS_MODULE", "project_name.settings_production")
+  elif environment == "staging":
+      os.environ.setdefault("DJANGO_SETTINGS_MODULE", "project_name.settings_staging")
+  elif environment == "development":
+      os.environ.setdefault("DJANGO_SETTINGS_MODULE", "project_name.settings_development")
+
 ```
-to   
-```manage.py
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "<your_project_name>.settings")
-```
+
 ### Settings.py
 Change the project_name to
 ```variables

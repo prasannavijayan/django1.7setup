@@ -8,9 +8,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 
-# Import the application environment file
-from env import *
-
 # Import the custom application developed
 from custom_application import *
 
