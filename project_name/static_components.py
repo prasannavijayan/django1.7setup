@@ -10,3 +10,11 @@ STATIC_ROOT = ''
 
 # Static DIRS
 STATICFILES_DIRS = (os.path.join(os.path.dirname(__file__),'static'),)
+
+# Static finders
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    # other finders..
+    'compressor.finders.CompressorFinder',
+)
