@@ -7,6 +7,19 @@ https://docs.djangoproject.com/en/1.7/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
+environment = "development"
+
+# development
+if environment == "development":
+    from settings_development import *
+
+# staging
+if environment == "staging":
+    from settings_staging import *
+
+# production
+if environment == "production":
+    from settings_production import *
 
 # Import the custom application developed
 from custom_application import *

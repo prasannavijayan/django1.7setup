@@ -14,7 +14,7 @@ if environment == "production":
 
 ```
 
-### Settings.py
+#### Settings.py
 Change the project_name to
 ```variables
 ROOT_URLCONF = 'project_name.urls'
@@ -27,3 +27,7 @@ ROOT_URLCONF = '<your_project_name>.urls'
 
 WSGI_APPLICATION = '<your_project_name>.wsgi.application'
 ```
+
+##### Additional details
+To create a very secure and secret key, please check the documentation here    
+https://gist.github.com/ndarville/3452907
