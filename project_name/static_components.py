@@ -18,3 +18,9 @@ STATICFILES_FINDERS = (
     # other finders..
     'compressor.finders.CompressorFinder',
 )
+
+# Media URL
+MEDIA_URL = '/media/'
+
+# Media Root
+MEDIA_ROOT = BASE_DIR + '/media'
